@@ -2,20 +2,25 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 
 import {app} from './src/config/firebase';
-import {getStorage, ref, uploadBytes, uploadString} from 'firebase/storage';
+import {
+  getStorage,
+  ref,
+  uploadBytes,
+  uploadString,
+  getDownloadURL,
+} from 'firebase/storage';
 
 import ImagePicker, {launchImageLibrary} from 'react-native-image-picker';
 // import * as ImagePicker from 'react-native-image-picker';
 import {async} from '@firebase/util';
 
 const App = () => {
-  const [image, setImage] = useState(null);
-  const [uploading, setUploading] = useState(false);
-  const [transferred, setTransferred] = useState(0);
+  const [urIimage, setUrlImage] = useState(null);
+  const [detailImage, setDetailImage] = useState({fileName: '', size: ''});
 
-  const [valBase64, setValBase64] = useState(null);
-
-  useEffect(() => {});
+  useEffect(() => {
+    bytesToSize();
+  }, [urIimage]);
 
   const selectImage = async () => {
     const options = {
@@ -36,35 +41,32 @@ const App = () => {
       } else if (response.customButton) {
         console.log('User tapped custom button: ', response.customButton);
       } else {
-        const source = {uri: response.assets[0].uri};
-        const filenya = response.assets[0].base64;
+        const filenya = response.assets[0];
         // console.log(source);
-        setImage(source);
-        setValBase64(response.assets[0].base64);
+        setDetailImage({fileName: filenya.fileName, size: filenya.fileSize});
 
         const storage = getStorage(app);
-        const storageRef = ref(storage, 'test.jpeg');
+        const storageRef = ref(storage, filenya.fileName);
 
-        const img = await fetch(response.assets[0].uri);
+        const img = await fetch(filenya.uri);
         const bytes = await img.blob();
 
         // 'file' comes from the Blob or File API
-        uploadBytes(storageRef, bytes).then(snapshot => {
-          console.log('Uploaded a blob or file!', snapshot);
-          console.log('Uploaded a blob or file!', bytes);
-        });
-
-        // Base64 formatted string
-        // const message2 = response.assets[0].base64;
-        // uploadString(storageRef, message2, 'base64').then(snapshot => {
-        //   console.log('Uploaded a base64 string!', snapshot);
+        //
+        // uploadBytes(storageRef, bytes).then(snapshot => {
+        //   console.log('Snapshot : ', snapshot);
+        //   console.log('Uploaded a blob or file!', bytes);
+        //   // getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+        //   //   console.log('File available at', downloadURL);
+        //   // });
         // });
 
-        // Data URL string
-        // const message4 = `data:image/jpeg;base64,${filenya}`;
-        // uploadString(storageRef, message4, 'data_url').then(snapshot => {
-        //   console.log('Uploaded a data_url string!', snapshot);
-        // });
+        getDownloadURL((await uploadBytes(storageRef, bytes)).ref).then(
+          downloadURL => {
+            console.log('File available at', downloadURL);
+            setUrlImage(downloadURL);
+          },
+        );
       }
     });
   };
@@ -87,15 +89,27 @@ const App = () => {
     }
   };
 
+  const bytesToSize = () => {
+    var bytes = detailImage.size;
+    var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+    if (bytes === '') {
+      // setDetailImage({...detailImage, size: '0 Byte'});
+    } else {
+      var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+      var result = Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+      setDetailImage({...detailImage, size: result});
+    }
+  };
+
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>Example Upload Foto to Firebase Storage</Text>
-      <Text>Name File : </Text>
-      <Text>Size: </Text>
-      {valBase64 === null ? (
+      <Text>Name File : {detailImage.fileName} </Text>
+      <Text>Size: {detailImage.size} </Text>
+      {urIimage !== null ? (
         <Image
           source={{
-            uri: 'https://firebasestorage.googleapis.com/v0/b/testfirebase-5d3b6.appspot.com/o/example.jpg?alt=media&token=4a18fe2f-d9c0-4b68-89df-dc215e2426f0',
+            uri: urIimage,
           }}
           style={{
             width: 200,
@@ -104,27 +118,17 @@ const App = () => {
             marginTop: 10,
           }}
         />
-      ) : (
-        <Image
-          source={{
-            uri: `data:image/png;base64,${valBase64}`,
-          }}
-          style={{
-            width: 200,
-            height: 200,
-            backgroundColor: 'red',
-            marginTop: 10,
-          }}
-        />
-      )}
+      ) : null}
 
       <TouchableOpacity
         onPress={selectImage}
         style={{
-          width: 100,
+          width: 120,
+          height: 30,
           backgroundColor: '#e3d4d3',
           marginTop: 10,
           alignItems: 'center',
+          justifyContent: 'center',
         }}>
         <Text>Select Pictute</Text>
       </TouchableOpacity>
