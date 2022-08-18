@@ -1,0 +1,259 @@
+{
+  "project_info": {
+    "project_number": "799266533322",
+    "firebase_url": "https://testfirebase-5d3b6.firebaseio.com",
+    "project_id": "testfirebase-5d3b6",
+    "storage_bucket": "testfirebase-5d3b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:8cd4e70eaf2ddf1a98e933",
+        "android_client_info": {
+          "package_name": "com.reactnativeuploadfototofirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:542823a46a1aea1398e933",
+        "android_client_info": {
+          "package_name": "com.roma.notificationfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:0736cd5c56e1c05598e933",
+        "android_client_info": {
+          "package_name": "com.roma.notifikasi5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:67fcbd5cb032f07a98e933",
+        "android_client_info": {
+          "package_name": "com.roma.notifikasiv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:81e450234750c61498e933",
+        "android_client_info": {
+          "package_name": "com.roma.notifikasiv4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-c4fln3hhkii7df3esphrq4nsmrah6tdl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.roma.notifikasiv4",
+            "certificate_hash": "d6794bb5d70a09e2e83e377fa2f5649c8e39b82a"
+          }
+        },
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:3b86133f7b6c336298e933",
+        "android_client_info": {
+          "package_name": "com.roma.notifikasiv5"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-c4rupuchng3n61r78mcs8423sefl7pln.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.roma.notifikasiv5",
+            "certificate_hash": "d6794bb5d70a09e2e83e377fa2f5649c8e39b82a"
+          }
+        },
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:271544202eeaab6198e933",
+        "android_client_info": {
+          "package_name": "com.roma.testfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799266533322:android:338b3b9542c1b9af98e933",
+        "android_client_info": {
+          "package_name": "com.roma.webview_login_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgnz2U4RalXRkhqC8yrOm3yXh4rabPR-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799266533322-jsk1884q4bgfrblbdl1lsi3me2p3c525.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
